@@ -37,19 +37,10 @@ public class USerDAO {
 	public USerDAO() {
 	}
 
-	protected Connection getConnection() {
-		Connection connection = null;
-		try {
-			Class.forName(jdbcDriver);
-			connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return connection;
+	protected Connection getConnection() throws SQLException{
+		Connection connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
+		System.out.println("Connected to Database.");
+	    return connection;
 	}
 
 	public void insertUser(User user) throws SQLException {
