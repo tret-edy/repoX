@@ -52,9 +52,6 @@
                      <destFileName>webapp-runner.jar</destFileName>
                             </artifactItem>
                         </artifactItems>
-                        <processTypes>
-     					<web>java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war</web>
-  					</processTypes>
                     </configuration>
                 </execution>
             </executions>
