@@ -101,6 +101,7 @@ public class USerDAO {
 				String name = rs.getString("name");
 				String email = rs.getString("email");
 				String category = rs.getString("category");
+				
 				users.add(new User(id, name, email, category));
 			}
 		} catch (SQLException e) {
